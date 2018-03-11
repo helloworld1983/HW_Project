@@ -1,0 +1,55 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             ARMex, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000         
+    4 00000000         start
+    5 00000000 E3A0000A        MOV              r0,#10      ; input 10 into reg
+                                                            ister 0
+    6 00000004 E3A0100A        MOV              r1,#10      ; input 10 into reg
+                                                            ister 1
+    7 00000008 E1500001        CMP              r0,r1       ; compare(r0-r1)
+    8 0000000C 41A02000        MOVMI            r2,r0       ;if r0<r1 / input r
+                                                            0 into r2
+    9 00000010 C1A02001        MOVGT            r2,r1       ;if r0>r1 / input r
+                                                            1 into r2
+   10 00000014 00800001        ADDEQ            r0,r0,r1    ;if r0 = r1 / input
+                                                             r0+r1 into r0
+   11 00000018 01A02000        MOVEQ            r2,r0       ; insert register0'
+                                                            s value into regist
+                                                            er 2
+   12 0000001C         
+   13 0000001C E1A0F00E        MOV              pc,lr
+   14 00000020                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=ARM9E --apcs=interwork 
+--depend=.\objects\exercise1.d -o.\objects\exercise1.o -IC:\Keil_v5\ARM\RV31\IN
+C -IC:\Keil_v5\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__UVI
+SION_VERSION SETA 521" --list=.\listings\exercise1.lst exercise1.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ARMex 00000000
+
+Symbol: ARMex
+   Definitions
+      At line 1 in file exercise1.s
+   Uses
+      None
+Comment: ARMex unused
+start 00000000
+
+Symbol: start
+   Definitions
+      At line 4 in file exercise1.s
+   Uses
+      None
+Comment: start unused
+2 symbols
+334 symbols in table

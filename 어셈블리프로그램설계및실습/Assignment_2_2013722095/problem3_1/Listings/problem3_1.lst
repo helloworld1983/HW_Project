@@ -1,0 +1,80 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             ARMex, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000         start
+    4 00000000 E3A00001        MOV              r0, #1
+    5 00000004 E59F2014        LDR              r2, TEMP
+    6 00000008         loop
+    7 00000008         
+    8 00000008 E350000B        CMP              r0, #11     ; r0가 11인가?
+    9 0000000C 10811000        ADDNE            r1, r1, r0  ; 아니라면 r1(합)에
+                                                             r0를 더함
+   10 00000010 12800001        ADDNE            r0,r0,#1    ; 아니라면 r0에 1을
+                                                             더함
+   11 00000014 1AFFFFFB        BNE              loop        ; 아니라면 loop로 �
+                                                            ′�
+   12 00000018         
+   13 00000018 E1C210B0        STRH             r1, [r2]
+   14 0000001C E1A0F00E        MOV              pc,lr
+   15 00000020 40000000 
+                       TEMP    DCD              &40000000
+   16 00000024         
+   17 00000024         END
+                       
+Command Line: --debug --xref --diag_suppress=9931 --cpu=ARM9E --apcs=interwork 
+--depend=.\objects\problem3_1.d -o.\objects\problem3_1.o -IC:\Keil_v5\ARM\RV31\
+INC -IC:\Keil_v5\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__U
+VISION_VERSION SETA 521" --list=.\listings\problem3_1.lst problem3_1.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ARMex 00000000
+
+Symbol: ARMex
+   Definitions
+      At line 1 in file problem3_1.s
+   Uses
+      None
+Comment: ARMex unused
+END 00000024
+
+Symbol: END
+   Definitions
+      At line 17 in file problem3_1.s
+   Uses
+      None
+Comment: END unused
+TEMP 00000020
+
+Symbol: TEMP
+   Definitions
+      At line 15 in file problem3_1.s
+   Uses
+      At line 5 in file problem3_1.s
+Comment: TEMP used once
+loop 00000008
+
+Symbol: loop
+   Definitions
+      At line 6 in file problem3_1.s
+   Uses
+      At line 11 in file problem3_1.s
+Comment: loop used once
+start 00000000
+
+Symbol: start
+   Definitions
+      At line 3 in file problem3_1.s
+   Uses
+      None
+Comment: start unused
+5 symbols
+337 symbols in table

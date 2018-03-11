@@ -1,0 +1,69 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             ARMex, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000         start
+    4 00000000 E3A0000A        MOV              r0, #10     ; r0~r1까지 각각 10
+                                                            , 5, 6, 2를 저장(예
+                                                            상결과 F)
+    5 00000004 E3A01005        MOV              r1, #5
+    6 00000008 E3A02006        MOV              r2, #6
+    7 0000000C E3A03002        MOV              r3, #2
+    8 00000010         
+    9 00000010 E0400001        SUB              r0,r0,r1    ; r0에 r0-r1값 저장
+                                                            (10-5)
+   10 00000014 E0010393        MUL              r1, r3, r3  ; r1에 r3*r3값 저장
+                                                            (2*2)
+   11 00000018 E0822001        ADD              r2, r2, r1  ; r2에 r2+r1값 저장
+                                                            (6+4)
+   12 0000001C E0800002        ADD              r0, r0, r2  ; r0에 r0+r2값 저장
+                                                            (5+10)
+   13 00000020         
+   14 00000020 E59F1000        LDR              r1, TEMP    ; r1에 주소값 저장
+   15 00000024 E5810000        STR              r0,[r1]     ; r1이 가진 값의 주
+                                                            소에 r0를 저장
+   16 00000028 40000000 
+                       TEMP    DCD              &40000000
+   17 0000002C         
+   18 0000002C E1A0F00E        mov              pc,lr
+   19 00000030                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=ARM9E --apcs=interwork 
+--depend=.\objects\problem1.d -o.\objects\problem1.o -IC:\Keil_v5\ARM\RV31\INC 
+-IC:\Keil_v5\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__UVISI
+ON_VERSION SETA 521" --list=.\listings\problem1.lst problem1.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ARMex 00000000
+
+Symbol: ARMex
+   Definitions
+      At line 1 in file problem1.s
+   Uses
+      None
+Comment: ARMex unused
+TEMP 00000028
+
+Symbol: TEMP
+   Definitions
+      At line 16 in file problem1.s
+   Uses
+      At line 14 in file problem1.s
+Comment: TEMP used once
+start 00000000
+
+Symbol: start
+   Definitions
+      At line 3 in file problem1.s
+   Uses
+      None
+Comment: start unused
+3 symbols
+335 symbols in table

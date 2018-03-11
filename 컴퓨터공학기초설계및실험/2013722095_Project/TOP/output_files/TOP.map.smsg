@@ -1,0 +1,31 @@
+Warning (10268): Verilog HDL information at mul_slave.v(95): always construct contains both blocking and non-blocking assignments
+Info (10281): Verilog HDL Declaration information at mul_slave.v(11): object "rAddr" differs only in case from object "RADDR" in the same scope
+Info (10281): Verilog HDL Declaration information at mul_slave.v(16): object "cand_we" differs only in case from object "CAND_WE" in the same scope
+Info (10281): Verilog HDL Declaration information at mul_slave.v(16): object "lier_we" differs only in case from object "LIER_WE" in the same scope
+Info (10281): Verilog HDL Declaration information at mul_slave.v(15): object "multiplicand" differs only in case from object "MULTIPLICAND" in the same scope
+Info (10281): Verilog HDL Declaration information at mul_slave.v(15): object "multiplier" differs only in case from object "MULTIPLIER" in the same scope
+Info (10281): Verilog HDL Declaration information at mul_slave.v(7): object "result" differs only in case from object "RESULT" in the same scope
+Warning (10273): Verilog HDL warning at write_operation.v(72): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at read_operation.v(53): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at read_operation.v(74): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at mux.v(64): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at mul_master.v(135): extended using "x" or "z"
+Warning (10268): Verilog HDL information at mul_master.v(70): always construct contains both blocking and non-blocking assignments
+Warning (10273): Verilog HDL warning at mul_master.v(251): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at mul_master.v(253): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at mul_master.v(254): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at mul_master.v(255): extended using "x" or "z"
+Info (10281): Verilog HDL Declaration information at mul_master.v(2): object "multiplicand" differs only in case from object "MULTIPLICAND" in the same scope
+Info (10281): Verilog HDL Declaration information at mul_master.v(2): object "multiplier" differs only in case from object "MULTIPLIER" in the same scope
+Info (10281): Verilog HDL Declaration information at mul_master.v(11): object "waddr" differs only in case from object "WADDR" in the same scope
+Warning (10268): Verilog HDL information at fifo_ns.v(15): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at fifo_cal_addr.v(16): always construct contains both blocking and non-blocking assignments
+Warning (10273): Verilog HDL warning at DMAC_write_operation.v(34): extended using "x" or "z"
+Info (10281): Verilog HDL Declaration information at DMAC_slave.v(10): object "opmode" differs only in case from object "OPMODE" in the same scope
+Warning (10273): Verilog HDL warning at DMAC_read_operation.v(28): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at DMAC_master.v(33): extended using "x" or "z"
+Warning (10268): Verilog HDL information at DMAC_master.v(26): always construct contains both blocking and non-blocking assignments
+Warning (10273): Verilog HDL warning at DMAC_master.v(99): extended using "x" or "z"
+Warning (10268): Verilog HDL information at DMAC_fifo_ns.v(15): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at DMAC_fifo_cal_addr.v(16): always construct contains both blocking and non-blocking assignments
+Warning (10273): Verilog HDL warning at bus_addr.v(24): extended using "x" or "z"

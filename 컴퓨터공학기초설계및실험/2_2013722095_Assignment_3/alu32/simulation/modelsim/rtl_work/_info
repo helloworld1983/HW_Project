@@ -1,0 +1,646 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\J\Desktop\alu32\simulation\modelsim
+v_and2
+IJXb;iNB`hfi:=N?<UWm2[1
+VRfc=ZbmOCzXC?P8L]m>Yf0
+Z1 dC:\Users\J\Desktop\alu32\simulation\modelsim
+Z2 w1475050366
+Z3 8C:/Users/J/Desktop/alu32/_gate.v
+Z4 FC:/Users/J/Desktop/alu32/_gate.v
+L0 150
+Z5 OV;L;10.1d;51
+r1
+31
+Z6 !s108 1475069527.960000
+Z7 !s107 C:/Users/J/Desktop/alu32/_gate.v|
+Z8 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/J/Desktop/alu32|C:/Users/J/Desktop/alu32/_gate.v|
+Z9 o-vlog01compat -work work -O0
+Z10 !s92 -vlog01compat -work work +incdir+C:/Users/J/Desktop/alu32 -O0
+n@_and2
+!i10b 1
+!s100 =gO]FoaREc:36[f@`72:X1
+!s85 0
+!s101 -O0
+v_and2_32bits
+IIjjhBAPX=Aa^XACnF=1Gd0
+VNU5J10N7@KboEe>oEe`870
+R1
+R2
+R3
+R4
+L0 36
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+n@_and2_32bits
+!i10b 1
+!s100 B^Jb7IKZ3XZJHD7TYjzYF0
+!s85 0
+!s101 -O0
+v_and2_4bits
+IWbabUO10XnO18<A5BA7;P2
+VU1>=847Agoe;jkRz66c8n2
+R1
+R2
+R3
+R4
+L0 55
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+n@_and2_4bits
+!i10b 1
+!s100 OQ?7UYFOWNm`OTQKQND]j3
+!s85 0
+!s101 -O0
+v_and3
+INA`KCg@5^Cmz;9XLX==eh3
+V;nKTbSAIIhiL8=D?LMmPO0
+R1
+R2
+R3
+R4
+L0 120
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+n@_and3
+!i10b 1
+!s100 T_zVj]LBN`5lYC?^_U<dW1
+!s85 0
+!s101 -O0
+v_and4
+I`=DGg`o:fFhYJOW2LzQe^3
+Va]I=4faF5lenC@:?aFP1c1
+R1
+R2
+R3
+R4
+L0 113
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+n@_and4
+!i10b 1
+!s100 7SEeE3]D:4ac]5l;Z?fFz0
+!s85 0
+!s101 -O0
+v_and5
+I2;o1FV0Bbeg?iON66EfJN2
+V?KU7S;hJ:o_AafkzY<_7X1
+R1
+R2
+R3
+R4
+L0 106
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+n@_and5
+!i10b 1
+!s100 ;`M;Bb@k<dm?`b3kHFkn90
+!s85 0
+!s101 -O0
+v_inv
+ISgG>Ueo8587Sk<D]MVHTI2
+V>L<l6I[0_OOY:R=L62KL43
+R1
+R2
+R3
+R4
+L0 160
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+n@_inv
+!i10b 1
+!s100 h7;hASiZb1Vfe97kaCDW@3
+!s85 0
+!s101 -O0
+v_inv_32bits
+I:RA7>m6YG4G?BlVd[eRfk3
+VfBn9c9j5g;6ei8e7JYnW?1
+R1
+R2
+R3
+R4
+L0 42
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+n@_inv_32bits
+!i10b 1
+!s100 OQPVS6T3UP>F>[7BcI;;43
+!s85 0
+!s101 -O0
+v_inv_4bits
+INf@nIIQe^iMbKdKn;dL2M1
+V11O>O7D<aC3jD>N5Lj3Tg0
+R1
+R2
+R3
+R4
+L0 49
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+n@_inv_4bits
+!i10b 1
+!s100 6M<NokALc^2cm4I`beTU91
+!s85 0
+!s101 -O0
+v_nand2
+IIe36G4Lg0DCnEzkP>Ym5o2
+V3md?F9TNo7A?hVh6=T^:L0
+R1
+R2
+R3
+R4
+L0 140
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+n@_nand2
+!i10b 1
+!s100 D1Q_?;GVhAZzCf21z[YK02
+!s85 0
+!s101 -O0
+v_or2
+IQ3aA@977DW3S?X6L;41MU3
+VVGDC?n97V5E?jc0GmP=Zo3
+R1
+R2
+R3
+R4
+L0 155
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+n@_or2
+!i10b 1
+!s100 H<jc>m2=17z:cdoG^iiRK1
+!s85 0
+!s101 -O0
+v_or2_32bits
+IeRd5Ig]U5<Y7fQkzfNQIM0
+V:;hQbQfgXCaf?kdQY9:aC0
+R1
+R2
+R3
+R4
+L0 30
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+n@_or2_32bits
+!i10b 1
+!s100 Mz_FH;9Woc>k=WoTATVzz2
+!s85 0
+!s101 -O0
+v_or2_4bits
+IJ:JWGbEm8TblK^`f:T><]2
+Vn;Xj<Y35^8^BZY13BOoXe1
+R1
+R2
+R3
+R4
+L0 61
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+n@_or2_4bits
+!i10b 1
+!s100 `FH24F1c1Al`OW2FzMU]20
+!s85 0
+!s101 -O0
+v_or3
+IfR3Y7Win`794@eW4H_>jU3
+VWj_=iW;d>nmn>jb`YGbTm2
+R1
+R2
+R3
+R4
+L0 99
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+n@_or3
+!i10b 1
+!s100 JiB<[=L<;nN<hZ=<UbOIB2
+!s85 0
+!s101 -O0
+v_or4
+IVdMZzNVQ`7iL19feahKJT0
+V41>0TlV`SK`0J=NSJhQaU1
+R1
+R2
+R3
+R4
+L0 92
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+n@_or4
+!i10b 1
+!s100 kP>G_AY2nKR196zjlPNdB1
+!s85 0
+!s101 -O0
+v_or5
+IhA990`^aTADgzlThVZUDR1
+VcdUBK9TRE8nW3[16a^0?B2
+R1
+R2
+R3
+R4
+L0 85
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+n@_or5
+!i10b 1
+!s100 o]7>UgoD0O1U4RlgoAlT91
+!s85 0
+!s101 -O0
+v_xnor2_32bits
+Ihok^]c]eAlbmG<UdHFblX2
+VXD3bi=T`6??m@Z:bTV?3f1
+R1
+R2
+R3
+R4
+L0 2
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+n@_xnor2_32bits
+!i10b 1
+!s100 ZJ78Rf0KWKD<oFb4[8<0h0
+!s85 0
+!s101 -O0
+v_xnor2_4bits
+IP8L3@dhOE7F4HdOf5E4]l1
+VQJ>gVoM4X_^W8g;aASbYk2
+R1
+R2
+R3
+R4
+L0 76
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+n@_xnor2_4bits
+!i10b 1
+!s100 f`PjOIV7cYeFL0`6O2;Y90
+!s85 0
+!s101 -O0
+v_xor2
+I]ZKU<kF2T02k=5kI3i3UN0
+VaZE^0TQG0h]JD@UbmNhbD1
+R1
+R2
+R3
+R4
+L0 127
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+n@_xor2
+!i10b 1
+!s100 b29EbMK4=NI[X_PbcDcfH1
+!s85 0
+!s101 -O0
+v_xor2_32bits
+IkT;n]_R8nLEiMVzj8ziFL3
+V=YPIjJ;?znPlLSl>TQ^501
+R1
+R2
+R3
+R4
+L0 16
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+n@_xor2_32bits
+!i10b 1
+!s100 aK^a1>d???EN4jB>U]_T_2
+!s85 0
+!s101 -O0
+v_xor2_4bits
+IL7@4;2@1kC77W5AOA9Jec1
+VX==P:OG@gOMJgigSPjDKS0
+R1
+R2
+R3
+R4
+L0 67
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+n@_xor2_4bits
+!i10b 1
+!s100 VczBnLPAFBP]X=aOOm8OY2
+!s85 0
+!s101 -O0
+valu32
+IlDX92DcIB_E4ZI1eUodYd2
+V77EDlZbgOQZ9gX_h3N27j3
+R1
+w1475063506
+8C:/Users/J/Desktop/alu32/alu32.v
+FC:/Users/J/Desktop/alu32/alu32.v
+L0 1
+R5
+r1
+31
+R9
+R10
+!i10b 1
+!s100 c:k1jGi[oK95g;VbF`zFX3
+!s85 0
+!s108 1475069528.799000
+!s107 C:/Users/J/Desktop/alu32/alu32.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/J/Desktop/alu32|C:/Users/J/Desktop/alu32/alu32.v|
+!s101 -O0
+vcal_flags32
+IiIN_M0O8f2^8IkIP8D9WB1
+VAgm3O6VBmHHodjGo@j1W<0
+R1
+w1475051179
+8C:/Users/J/Desktop/alu32/cal_flags32.v
+FC:/Users/J/Desktop/alu32/cal_flags32.v
+L0 1
+R5
+r1
+31
+R9
+R10
+!i10b 1
+!s100 L>FiobJ>AI97@@?c1oH4N2
+!s85 0
+!s108 1475069528.737000
+!s107 C:/Users/J/Desktop/alu32/cal_flags32.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/J/Desktop/alu32|C:/Users/J/Desktop/alu32/cal_flags32.v|
+!s101 -O0
+vcla32_ov
+IOjbV]1d0UoFcDIFgFE;;E3
+V``B?l5g?YEJnaB7JjTzVL2
+R1
+w1475064342
+8C:/Users/J/Desktop/alu32/cla32_ov.v
+FC:/Users/J/Desktop/alu32/cla32_ov.v
+L0 1
+R5
+r1
+31
+R9
+R10
+!i10b 1
+!s100 ;iOC9Q]OWXgoVacL681?b1
+!s85 0
+!s108 1475069528.678000
+!s107 C:/Users/J/Desktop/alu32/cla32_ov.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/J/Desktop/alu32|C:/Users/J/Desktop/alu32/cla32_ov.v|
+!s101 -O0
+vcla4
+Id<VNL9IiBHY:0P1M7DYWk1
+V1C]l:<LaT?IhCT7g4PQ>n1
+R1
+w1473317308
+8C:/Users/J/Desktop/alu32/cla4.v
+FC:/Users/J/Desktop/alu32/cla4.v
+L0 1
+R5
+r1
+31
+R9
+R10
+!i10b 1
+!s100 6454^<??7KQaTUj9Rzi6O1
+!s85 0
+!s108 1475069528.616000
+!s107 C:/Users/J/Desktop/alu32/cla4.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/J/Desktop/alu32|C:/Users/J/Desktop/alu32/cla4.v|
+!s101 -O0
+vcla4_ov
+IN^ZIiRUPVzaZNA<Ca?=1b3
+V^JEC2jG>5DE9?Mj_g:^IP3
+R1
+w1475050793
+8C:/Users/J/Desktop/alu32/cla4_ov.v
+FC:/Users/J/Desktop/alu32/cla4_ov.v
+L0 1
+R5
+r1
+31
+R9
+R10
+!i10b 1
+!s100 4Eno1gZ9R`c`KADGlJfZg1
+!s85 0
+!s108 1475069528.553000
+!s107 C:/Users/J/Desktop/alu32/cla4_ov.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/J/Desktop/alu32|C:/Users/J/Desktop/alu32/cla4_ov.v|
+!s101 -O0
+vclb4
+IjQea1;BoX?aSV5QV<5O8;2
+VJf=4g>b0RLIaNK;IR@_K?2
+R1
+w1474503316
+8C:/Users/J/Desktop/alu32/clb4.v
+FC:/Users/J/Desktop/alu32/clb4.v
+L0 1
+R5
+r1
+31
+R9
+R10
+!i10b 1
+!s100 M5c==gU7ofTR;K49jP=1g2
+!s85 0
+!s108 1475069528.486000
+!s107 C:/Users/J/Desktop/alu32/clb4.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/J/Desktop/alu32|C:/Users/J/Desktop/alu32/clb4.v|
+!s101 -O0
+vfa_v2
+IGU?gj7m0YP?HSWG3AkXWN3
+VE<6dW7PKa<EjKTgmQcj050
+R1
+w1474510374
+8C:/Users/J/Desktop/alu32/fa_v2.v
+FC:/Users/J/Desktop/alu32/fa_v2.v
+L0 1
+R5
+r1
+31
+R9
+R10
+!i10b 1
+!s100 5NYm2hSeD^GB3O`zod:1K1
+!s85 0
+!s108 1475069528.423000
+!s107 C:/Users/J/Desktop/alu32/fa_v2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/J/Desktop/alu32|C:/Users/J/Desktop/alu32/fa_v2.v|
+!s101 -O0
+vmx2_32bits
+IECCe5GHfJSN=Ah1edePRa2
+VQWo7KgCG^>hI_3LCFYQZ[3
+R1
+w1475050595
+8C:/Users/J/Desktop/alu32/mx2_32bits.v
+FC:/Users/J/Desktop/alu32/mx2_32bits.v
+L0 1
+R5
+r1
+31
+R9
+R10
+!i10b 1
+!s100 >>^]BNfY_V61oV5VmYg]i3
+!s85 0
+!s108 1475069528.354000
+!s107 C:/Users/J/Desktop/alu32/mx2_32bits.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/J/Desktop/alu32|C:/Users/J/Desktop/alu32/mx2_32bits.v|
+!s101 -O0
+vmx8_32bits
+ISgkgzcc2F4;S2RohfRMMN0
+VRF^7VCOYC8gc5i6iPCJ7H3
+R1
+w1475050537
+8C:/Users/J/Desktop/alu32/mx8_32bits.v
+FC:/Users/J/Desktop/alu32/mx8_32bits.v
+L0 1
+R5
+r1
+31
+R9
+R10
+!i10b 1
+!s100 :Ia0iX4WL1JdoZHONB1N<3
+!s85 0
+!s108 1475069528.264000
+!s107 C:/Users/J/Desktop/alu32/mx8_32bits.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/J/Desktop/alu32|C:/Users/J/Desktop/alu32/mx8_32bits.v|
+!s101 -O0
+vtb_alu32
+!i10b 1
+!s100 LdSEnoV^?N?_Z_F>KiQ<Y0
+IkMAB^0`LWA0S_[J1]h?7M0
+VRcdE325MOf[Rg@6aIHO?X2
+R1
+w1475069479
+8C:/Users/J/Desktop/alu32/tb_alu32.v
+FC:/Users/J/Desktop/alu32/tb_alu32.v
+L0 3
+R5
+r1
+!s85 0
+31
+!s108 1475069528.858000
+!s107 C:/Users/J/Desktop/alu32/tb_alu32.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/J/Desktop/alu32|C:/Users/J/Desktop/alu32/tb_alu32.v|
+!s101 -O0
+R9
+R10

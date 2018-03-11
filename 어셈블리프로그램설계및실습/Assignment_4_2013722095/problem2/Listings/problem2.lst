@@ -1,0 +1,197 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             ARMex, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000         start
+    4 00000000 E59FA0E4        ldr              r10, temp   ; r10에 메모리 주소
+                                                             저장
+    5 00000004         main
+    6 00000004 E3A0000A        mov              r0, #10     ; 아래와 같이 reg들
+                                                            에 값을 저장
+    7 00000008 E3A0100B        mov              r1, #11
+    8 0000000C E3A0200C        mov              r2, #12
+    9 00000010 E3A0300D        mov              r3, #13
+   10 00000014 E3A0400E        mov              r4, #14
+   11 00000018 E3A0500F        mov              r5, #15
+   12 0000001C E3A06010        mov              r6, #16
+   13 00000020 E3A07011        mov              r7, #17
+   14 00000024         
+   15 00000024         
+   16 00000024         ; r11 은 return 으로 함.
+   17 00000024         
+   18 00000024 E88D00FF        stmea            sp, {r0-r7} ; reg값들을 stack에
+                                                             복사
+   19 00000028 E1A0E00F        mov              lr, pc      ; 돌아올 위치를 lr�
+                                                            � 저장
+   20 0000002C EA00000E        B                doRegister  ; doRegister함수 호
+                                                            출
+   21 00000030         
+   22 00000030         
+   23 00000030 E1A0900B        mov              r9, r11     ; r9에 r11값 저장
+   24 00000034         
+   25 00000034 E15C0F8B        cmp              r12, r11, lsl #31 ; r11의 1의자
+                                                            리 비트값이 0인가?(
+                                                            짝/홀 비교)
+   26 00000038 0A000005        beq              even        ; 짝수면 even으로 �
+                                                            ′�
+   27 0000003C         
+   28 0000003C         
+   29 0000003C E0499001        sub              r9, r1      ; index가 홀수인 값
+                                                            들을 빼줌
+   30 00000040 E0499003        sub              r9, r3
+   31 00000044 E0499005        sub              r9, r5
+   32 00000048 E0499007        sub              r9, r7
+   33 0000004C E58A9000        str              r9, [r10]   ; 빼준 값을 0x40000
+                                                            에 저장
+   34 00000050 E3A0F000        mov              pc, #0
+   35 00000054         even
+   36 00000054 E0499000        sub              r9, r0      ; index가 짝수인 값
+                                                            들을 빼줌
+   37 00000058 E0499002        sub              r9, r2
+   38 0000005C E0499004        sub              r9, r4
+   39 00000060 E0499006        sub              r9, r6
+   40 00000064 E58A9000        str              r9, [r10]   ; 빼준 값을 0x40000
+                                                            에 저장
+   41 00000068 E3A0F000        mov              pc, #0
+   42 0000006C         
+   43 0000006C         
+   44 0000006C         doRegister
+   45 0000006C E8BD0200        ldmfd            sp!, {r9}   ; sp 가 가리키는 값
+                                                            을 r9에 복사
+   46 00000070 E0090998        mul              r9, r8, r9  ; 복사해둔 reg값과 
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+                                                            index의 곱을 저장
+   47 00000074 E089B00B        add              r11, r9, r11 ; 그 곱을 return에
+                                                             더함.
+   48 00000078 E2888001        add              r8, r8, #1  ; index +1
+   49 0000007C E8BD0200        ldmfd            sp!, {r9}   ; sp 가 가리키는 값
+                                                            을 r9에 복사
+   50 00000080 E0090998        mul              r9, r8, r9  ; 복사해둔 reg값과 
+                                                            index의 곱을 저장
+   51 00000084 E089B00B        add              r11, r9, r11 ; 그 곱을 return에
+                                                             더함.
+   52 00000088 E2888001        add              r8, r8, #1  ; index +1
+   53 0000008C E8BD0200        ldmfd            sp!, {r9}   ; sp 가 가리키는 값
+                                                            을 r9에 복사
+   54 00000090 E0090998        mul              r9, r8, r9  ; 복사해둔 reg값과 
+                                                            index의 곱을 저장
+   55 00000094 E089B00B        add              r11, r9, r11 ; 그 곱을 return에
+                                                             더함.
+   56 00000098 E2888001        add              r8, r8, #1  ; index +1
+   57 0000009C E8BD0200        ldmfd            sp!, {r9}   ; sp 가 가리키는 값
+                                                            을 r9에 복사
+   58 000000A0 E0090998        mul              r9, r8, r9  ; 복사해둔 reg값과 
+                                                            index의 곱을 저장
+   59 000000A4 E089B00B        add              r11, r9, r11 ; 그 곱을 return에
+                                                             더함.
+   60 000000A8 E2888001        add              r8, r8, #1  ; index +1
+   61 000000AC E8BD0200        ldmfd            sp!, {r9}   ; sp 가 가리키는 값
+                                                            을 r9에 복사
+   62 000000B0 E0090998        mul              r9, r8, r9  ; 복사해둔 reg값과 
+                                                            index의 곱을 저장
+   63 000000B4 E089B00B        add              r11, r9, r11 ; 그 곱을 return에
+                                                             더함.
+   64 000000B8 E2888001        add              r8, r8, #1  ; index +1
+   65 000000BC E8BD0200        ldmfd            sp!, {r9}   ; sp 가 가리키는 값
+                                                            을 r9에 복사
+   66 000000C0 E0090998        mul              r9, r8, r9  ; 복사해둔 reg값과 
+                                                            index의 곱을 저장
+   67 000000C4 E089B00B        add              r11, r9, r11 ; 그 곱을 return에
+                                                             더함.
+   68 000000C8 E2888001        add              r8, r8, #1  ; index +1
+   69 000000CC E8BD0200        ldmfd            sp!, {r9}   ; sp 가 가리키는 값
+                                                            을 r9에 복사
+   70 000000D0 E0090998        mul              r9, r8, r9  ; 복사해둔 reg값과 
+                                                            index의 곱을 저장
+   71 000000D4 E089B00B        add              r11, r9, r11 ; 그 곱을 return에
+                                                             더함.
+   72 000000D8 E2888001        add              r8, r8, #1  ; index +1
+   73 000000DC E8BD0200        ldmfd            sp!, {r9}   ; sp 가 가리키는 값
+                                                            을 r9에 복사
+   74 000000E0 E0090998        mul              r9, r8, r9  ; 복사해둔 reg값과 
+                                                            index의 곱을 저장
+   75 000000E4 E089B00B        add              r11, r9, r11 ; 그 곱을 return에
+                                                             더함.
+   76 000000E8         
+   77 000000E8         
+   78 000000E8 E1A0F00E        mov              pc, lr      ; index가 7이면 doR
+                                                            egister를 호출했던 
+                                                            곳으로 이동
+   79 000000EC 00040000 
+                       temp    &                &40000
+
+
+
+ARM Macro Assembler    Page 3 
+
+
+   80 000000F0                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=ARM9E --apcs=interwork 
+--depend=.\objects\problem2.d -o.\objects\problem2.o -IC:\Keil_v5\ARM\RV31\INC 
+-IC:\Keil_v5\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__UVISI
+ON_VERSION SETA 521" --list=.\listings\problem2.lst problem2.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ARMex 00000000
+
+Symbol: ARMex
+   Definitions
+      At line 1 in file problem2.s
+   Uses
+      None
+Comment: ARMex unused
+doRegister 0000006C
+
+Symbol: doRegister
+   Definitions
+      At line 44 in file problem2.s
+   Uses
+      At line 20 in file problem2.s
+Comment: doRegister used once
+even 00000054
+
+Symbol: even
+   Definitions
+      At line 35 in file problem2.s
+   Uses
+      At line 26 in file problem2.s
+Comment: even used once
+main 00000004
+
+Symbol: main
+   Definitions
+      At line 5 in file problem2.s
+   Uses
+      None
+Comment: main unused
+start 00000000
+
+Symbol: start
+   Definitions
+      At line 3 in file problem2.s
+   Uses
+      None
+Comment: start unused
+temp 000000EC
+
+Symbol: temp
+   Definitions
+      At line 79 in file problem2.s
+   Uses
+      At line 4 in file problem2.s
+Comment: temp used once
+6 symbols
+338 symbols in table

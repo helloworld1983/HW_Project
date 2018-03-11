@@ -1,0 +1,2 @@
+Dependencies for Project 'second', Target 'Target 1': (DO NOT MODIFY !)
+F (.\second.s)(0x57FB9413)(--cpu ARM9E --pd "__EVAL SETA 1" -g --apcs=interwork -IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 521"--list .\listings\second.lst --xref -o .\objects\second.o --depend .\objects\second.d)

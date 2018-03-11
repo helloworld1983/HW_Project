@@ -1,0 +1,7 @@
+Warning (10273): Verilog HDL warning at Multiplier.v(74): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at Multiplier.v(83): extended using "x" or "z"
+Warning (10268): Verilog HDL information at Multiplier.v(53): always construct contains both blocking and non-blocking assignments
+Warning (10273): Verilog HDL warning at Multiplier.v(170): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at Multiplier.v(172): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at Multiplier.v(173): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at Multiplier.v(174): extended using "x" or "z"

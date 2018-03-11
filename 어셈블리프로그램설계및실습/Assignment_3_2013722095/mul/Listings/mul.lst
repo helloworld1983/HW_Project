@@ -1,0 +1,81 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             ARMex, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000         start
+    4 00000000 E3A02001        mov              r2, #1      ; ÇÇ°ö¼À°ª
+    5 00000004 E3A01001        mov              r1, #1      ; °ö¼À°ª
+    6 00000008 E59F3014        ldr              r3, temp    ; ¸Þ¸ð¸® Á¢±Ù ÁÖ¼Ò
+    7 0000000C         loop
+    8 0000000C         
+    9 0000000C E0020291        MUL              r2, r1,r2   ; r2¿¡ r2*r1À» ÀúÀå
+                                                            
+   10 00000010 E4832004        STR              r2, [r3],#4 ; r2°ªÀ» r3¹øÁö¿¡ À
+                                                            úÀåÇÏ°í r3¸¦ 4 Áõ°¡
+                                                            ÇÔ.
+   11 00000014 E351000A        CMP              r1,#10      ; r1ÀÌ 10ÀÎ°¡?
+   12 00000018 12811001        ADDNE            r1,#1       ; ¾Æ´Ï¸é r1À» 1Áõ°¡
+                                                            ½ÃÅ°°í
+   13 0000001C 1AFFFFFA        BNE              loop        ; ¾Æ´Ï¸é loop·Î Á¡Ç
+                                                            Á
+   14 00000020 E1A0F00E        mov              pc,lr
+   15 00000024 00040000 
+                       temp    DCD              0x40000
+   16 00000028         END
+                       
+Command Line: --debug --xref --diag_suppress=9931 --cpu=ARM9E --apcs=interwork 
+--depend=.\objects\mul.d -o.\objects\mul.o -IC:\Keil_v5\ARM\RV31\INC -IC:\Keil_
+v5\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION
+ SETA 521" --list=.\listings\mul.lst mul.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ARMex 00000000
+
+Symbol: ARMex
+   Definitions
+      At line 1 in file mul.s
+   Uses
+      None
+Comment: ARMex unused
+END 00000028
+
+Symbol: END
+   Definitions
+      At line 16 in file mul.s
+   Uses
+      None
+Comment: END unused
+loop 0000000C
+
+Symbol: loop
+   Definitions
+      At line 7 in file mul.s
+   Uses
+      At line 13 in file mul.s
+Comment: loop used once
+start 00000000
+
+Symbol: start
+   Definitions
+      At line 3 in file mul.s
+   Uses
+      None
+Comment: start unused
+temp 00000024
+
+Symbol: temp
+   Definitions
+      At line 15 in file mul.s
+   Uses
+      At line 6 in file mul.s
+Comment: temp used once
+5 symbols
+337 symbols in table

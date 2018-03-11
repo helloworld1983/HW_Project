@@ -1,0 +1,202 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000 0000000D 
+                       CR      equ              0x0d        ; CR¿ª 0xd∑Œ ¡§¿«
+    2 00000000         
+    3 00000000                 AREA             strcpy, CODE, READONLY
+    4 00000000                 ENTRY
+    5 00000000         main
+    6 00000000 E59F0064        ldr              r0, =Arr1   ; arr1¿« ¡÷º“∏¶ ¿˙¿
+                                                            Â
+    7 00000004 E59F1064        ldr              r1, =Arr2   ; arr2¿« ¡÷º“∏¶ ¿˙¿
+                                                            Â
+    8 00000008 E28F7020        adr              r7, loop    ; loop lable¿« ¡÷º“
+                                                            ∞™¿ª r7ø° ¿˙¿Â
+    9 0000000C         
+   10 0000000C E3A03001        mov              r3 , #1     ; arr2¿« ±Ê¿Ã∞™¿ª 1
+                                                            ∑Œ √ ±‚»≠
+   11 00000010 E54F3008        strb             r3, k
+   12 00000014         
+   13 00000014 E1A0E00F        mov              lr, pc      ; «ˆ¿ßƒ° ¿˙¿Â
+   14 00000018 EA000001        b                copy_arr_wo_space 
+                                                            ; copy «‘ºˆ »£√‚
+   15 0000001C         
+   16 0000001C E54F5008        strb             r5,  k      ; addr2¿« ±Ê¿Ã∏¶ kø
+                                                            ° ¿˙¿Â
+   17 00000020 E3A0F000        mov              pc, #0
+   18 00000024         
+   19 00000024         copy_arr_wo_space
+   20 00000024 E9AD003F        stmfa            sp!, {r0-r5} ; r0~r5∏¶ Ω∫≈√ø° ¿
+                                                            ˙¿Â
+   21 00000028 E3A04000        mov              r4, #0      ; i = 0
+   22 0000002C E3A05000        mov              r5, #0      ; j = 0
+   23 00000030         loop
+   24 00000030 E7D03004        ldrb             r3, [r0, r4] ; arr1[i]¿ª r3ø° »
+                                                            £√‚
+   25 00000034         
+   26 00000034 E353000D        cmp              r3, #CR     ; ARR1¿« ≥°¿Œ∞°?
+   27 00000038 0A000008        beq              DONE        ; ±◊∑∏¥Ÿ∏È done∑Œ ¿
+                                                            Ãµø
+   28 0000003C E3530020        cmp              r3, #0x20   ; ∫πªÁ«“ ∞™¿Ã space
+                                                            ¿Œ∞°?
+   29 00000040 02855001        addeq            r5, r5, #1  ; ¿˙¿Â ¿ßƒ° ∞®º“∏¶ 
+                                                            ¿ß«ÿº≠ ª©¡Ÿ ∞™ ¡ı∞°
+                                                            
+   30 00000044 02844001        addeq            r4, r4, #1
+   31 00000048 01A0F007        moveq            pc, r7      ; ±◊∑∏¥Ÿ∏È π›∫ππÆ¿«
+                                                             √≥¿Ω¿∏∑Œ µπæ∆∞®
+   32 0000004C         
+   33 0000004C E0446005        sub              r6, r4, r5  ; i-j
+   34 00000050 E7C13006        strb             r3, [r1, r6] ; arr2[i-j] ¿ßƒ°ø°
+                                                             r3∞™¿ª ¿˙¿Â
+   35 00000054 E2844001        add              r4, r4, #1  ; arr1¿« index¡ı∞°
+   36 00000058 E2899001        add              r9, r9, #1  ; arr2¿« length
+   37 0000005C         
+   38 0000005C E1A0F007        mov              pc,r7       ; r7(loop¿« ¡÷º“)∑Œ
+                                                             pc∏¶ ø≈±Ë
+   39 00000060         
+   40 00000060         
+   41 00000060         DONE
+   42 00000060 E5CD9000        strb             r9, [sp]    ; arr2¿« ±Ê¿Ã∞™¿ª s
+                                                            p ¿ßƒ°(r5)ø° ¿˙¿Â
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+   43 00000064 E59D5000        ldr              r5, [sp]    ; pop
+   44 00000068 E1A0F00E        mov              pc, lr
+   45 0000006C         
+   46 0000006C         ;===========dataarray area
+   47 0000006C 00000000 
+              00000000         AREA             dataArray, DATA
+   48 00000000         
+   49 00000000         k
+   50 00000000 00              dcb              0
+   51 00000001         
+   52 00000001         Arr1
+   53 00000001 48 65 6C 
+              6C 6F 2C 
+              20 57 6F 
+              72 6C 64 
+              0D               dcb              "Hello, World", CR
+   54 0000000E 00 00           ALIGN
+   55 00000010         
+   56 00000010         
+   57 00000010         Arr2
+   58 00000010 00              dcb              0           ; ∫πªÁ«“ ∞¯∞£
+   59 00000011         
+   60 00000011                 end
+Command Line: --debug --xref --diag_suppress=9931 --cpu=ARM9E --apcs=interwork 
+--depend=.\objects\problem1.d -o.\objects\problem1.o -IC:\Keil_v5\ARM\RV31\INC 
+-IC:\Keil_v5\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__UVISI
+ON_VERSION SETA 521" --list=.\listings\problem1.lst problem1.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+DONE 00000060
+
+Symbol: DONE
+   Definitions
+      At line 41 in file problem1.s
+   Uses
+      At line 27 in file problem1.s
+Comment: DONE used once
+copy_arr_wo_space 00000024
+
+Symbol: copy_arr_wo_space
+   Definitions
+      At line 19 in file problem1.s
+   Uses
+      At line 14 in file problem1.s
+Comment: copy_arr_wo_space used once
+loop 00000030
+
+Symbol: loop
+   Definitions
+      At line 23 in file problem1.s
+   Uses
+      At line 8 in file problem1.s
+Comment: loop used once
+main 00000000
+
+Symbol: main
+   Definitions
+      At line 5 in file problem1.s
+   Uses
+      None
+Comment: main unused
+strcpy 00000000
+
+Symbol: strcpy
+   Definitions
+      At line 3 in file problem1.s
+   Uses
+      None
+Comment: strcpy unused
+5 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Arr1 00000001
+
+Symbol: Arr1
+   Definitions
+      At line 52 in file problem1.s
+   Uses
+      At line 6 in file problem1.s
+Comment: Arr1 used once
+Arr2 00000010
+
+Symbol: Arr2
+   Definitions
+      At line 57 in file problem1.s
+   Uses
+      At line 7 in file problem1.s
+Comment: Arr2 used once
+dataArray 00000000
+
+Symbol: dataArray
+   Definitions
+      At line 47 in file problem1.s
+   Uses
+      None
+Comment: dataArray unused
+k 00000000
+
+Symbol: k
+   Definitions
+      At line 49 in file problem1.s
+   Uses
+      At line 11 in file problem1.s
+      At line 16 in file problem1.s
+
+4 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Absolute symbols
+
+CR 0000000D
+
+Symbol: CR
+   Definitions
+      At line 1 in file problem1.s
+   Uses
+      At line 26 in file problem1.s
+      At line 53 in file problem1.s
+
+1 symbol
+344 symbols in table

@@ -1,0 +1,158 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do alu32_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/J/Desktop/alu32 {C:/Users/J/Desktop/alu32/_gate.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module _xnor2_32bits
+# -- Compiling module _xor2_32bits
+# -- Compiling module _or2_32bits
+# -- Compiling module _and2_32bits
+# -- Compiling module _inv_32bits
+# -- Compiling module _inv_4bits
+# -- Compiling module _and2_4bits
+# -- Compiling module _or2_4bits
+# -- Compiling module _xor2_4bits
+# -- Compiling module _xnor2_4bits
+# -- Compiling module _or5
+# -- Compiling module _or4
+# -- Compiling module _or3
+# -- Compiling module _and5
+# -- Compiling module _and4
+# -- Compiling module _and3
+# -- Compiling module _xor2
+# -- Compiling module _nand2
+# -- Compiling module _and2
+# -- Compiling module _or2
+# -- Compiling module _inv
+# 
+# Top level modules:
+# 	_xnor2_32bits
+# 	_xor2_32bits
+# 	_or2_32bits
+# 	_and2_32bits
+# 	_inv_32bits
+# 	_and2_4bits
+# 	_or2_4bits
+# 	_or5
+# 	_or4
+# 	_or3
+# 	_and5
+# 	_and4
+# 	_and3
+# 	_nand2
+# vlog -vlog01compat -work work +incdir+C:/Users/J/Desktop/alu32 {C:/Users/J/Desktop/alu32/mx8_32bits.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mx8_32bits
+# 
+# Top level modules:
+# 	mx8_32bits
+# vlog -vlog01compat -work work +incdir+C:/Users/J/Desktop/alu32 {C:/Users/J/Desktop/alu32/mx2_32bits.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mx2_32bits
+# 
+# Top level modules:
+# 	mx2_32bits
+# vlog -vlog01compat -work work +incdir+C:/Users/J/Desktop/alu32 {C:/Users/J/Desktop/alu32/fa_v2.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fa_v2
+# 
+# Top level modules:
+# 	fa_v2
+# vlog -vlog01compat -work work +incdir+C:/Users/J/Desktop/alu32 {C:/Users/J/Desktop/alu32/clb4.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module clb4
+# 
+# Top level modules:
+# 	clb4
+# vlog -vlog01compat -work work +incdir+C:/Users/J/Desktop/alu32 {C:/Users/J/Desktop/alu32/cla4_ov.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module cla4_ov
+# 
+# Top level modules:
+# 	cla4_ov
+# vlog -vlog01compat -work work +incdir+C:/Users/J/Desktop/alu32 {C:/Users/J/Desktop/alu32/cla4.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module cla4
+# 
+# Top level modules:
+# 	cla4
+# vlog -vlog01compat -work work +incdir+C:/Users/J/Desktop/alu32 {C:/Users/J/Desktop/alu32/cla32_ov.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module cla32_ov
+# 
+# Top level modules:
+# 	cla32_ov
+# vlog -vlog01compat -work work +incdir+C:/Users/J/Desktop/alu32 {C:/Users/J/Desktop/alu32/cal_flags32.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module cal_flags32
+# 
+# Top level modules:
+# 	cal_flags32
+# vlog -vlog01compat -work work +incdir+C:/Users/J/Desktop/alu32 {C:/Users/J/Desktop/alu32/alu32.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module alu32
+# 
+# Top level modules:
+# 	alu32
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/J/Desktop/alu32 {C:/Users/J/Desktop/alu32/tb_alu32.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_alu32
+# 
+# Top level modules:
+# 	tb_alu32
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs="+acc"  tb_alu32
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps tb_alu32 
+# Loading work.tb_alu32
+# Loading work.alu32
+# Loading work._inv_32bits
+# Loading work._and2_32bits
+# Loading work._or2_32bits
+# Loading work._xor2_32bits
+# Loading work._xor2_4bits
+# Loading work._xor2
+# Loading work._inv
+# Loading work._and2
+# Loading work._or2
+# Loading work._xnor2_32bits
+# Loading work._xnor2_4bits
+# Loading work._inv_4bits
+# Loading work.cla32_ov
+# Loading work.cla4
+# Loading work.fa_v2
+# Loading work.clb4
+# Loading work._and3
+# Loading work._or3
+# Loading work._and4
+# Loading work._or4
+# Loading work._and5
+# Loading work._or5
+# Loading work.cla4_ov
+# Loading work.mx8_32bits
+# Loading work.mx2_32bits
+# Loading work.cal_flags32
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# All tests completed
+# ** Note: $finish    : C:/Users/J/Desktop/alu32/tb_alu32.v(45)
+#    Time: 75 ns  Iteration: 1  Instance: /tb_alu32
+# 1
+# Break in Module tb_alu32 at C:/Users/J/Desktop/alu32/tb_alu32.v line 45
+# Simulation Breakpoint: 1
+# Break in Module tb_alu32 at C:/Users/J/Desktop/alu32/tb_alu32.v line 45
+# MACRO ./alu32_run_msim_rtl_verilog.do PAUSED at line 26

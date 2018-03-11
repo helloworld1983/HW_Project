@@ -1,0 +1,97 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             ARMex, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000         start
+    4 00000000 E3A00005        mov              r0, #5      ;save each value to
+                                                             each register
+    5 00000004 E3A0100A        mov              r1, #10
+    6 00000008 E3A0200F        mov              r2, #15
+    7 0000000C E3A0300A        mov              r3, #10
+    8 00000010         
+    9 00000010 E59F4060        ldr              r4, TEMP    ; save memory's adr
+                                                            ess into register 4
+                                                            
+   10 00000014 E1A09004        mov              r9, r4      ; save resigster 4'
+                                                            s value into regist
+                                                            er 9
+   11 00000018 E4C40001        STRB             r0, [r4], #1 ; save resigsters'
+                                                             value into memory
+   12 0000001C E4C41001        STRB             r1, [r4], #1
+   13 00000020 E4C42001        STRB             r2, [r4], #1
+   14 00000024 E4C43001        STRB             r3, [r4], #1
+   15 00000028         
+   16 00000028 E4D95001        LDRB             r5, [r9], #1 ; load memory's va
+                                                            lue into each regis
+                                                            ter
+   17 0000002C E4D96001        LDRB             r6, [r9], #1
+   18 00000030 E4D97001        LDRB             r7, [r9], #1
+   19 00000034 E5D93000        LDRB             r3, [r9]
+   20 00000038         
+   21 00000038 E1530002        CMP              r3,r2       ; compare / r3-r2
+   22 0000003C 43A05001        MOVMI            r5,#1       ; if r3<r2, insert 
+                                                            1 into register 5(1
+                                                            004)
+   23 00000040 C3A05002        MOVGT            r5,#2
+   24 00000044 03A05003        MOVEQ            r5,#3
+   25 00000048 E4C45001        STRB             r5, [r4], #1
+   26 0000004C         
+   27 0000004C E1530000        CMP              r3,r0       ; compare / r3-r0
+   28 00000050 43A05001        MOVMI            r5,#1       ; 
+   29 00000054 C3A05002        MOVGT            r5,#2
+   30 00000058 03A05003        MOVEQ            r5,#3       ; 
+   31 0000005C E4C45001        STRB             r5, [r4], #1
+   32 00000060         
+   33 00000060 E1530001        CMP              r3,r1       ;compare / r3-r0
+   34 00000064 43A05001        MOVMI            r5,#1       ; if r3<r2, insert 
+                                                            1 into register 5(1
+                                                            004)
+   35 00000068 C3A05002        MOVGT            r5,#2
+   36 0000006C 03A05003        MOVEQ            r5,#3
+   37 00000070 E5C45000        STRB             r5, [r4]
+   38 00000074         
+   39 00000074 E1A0F00E        MOV              pc,lr
+   40 00000078 00001000 
+                       TEMP    &                &00001000
+   41 0000007C         
+   42 0000007C                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=ARM9E --apcs=interwork 
+--depend=.\objects\problem1.d -o.\objects\problem1.o -IC:\Keil_v5\ARM\RV31\INC 
+-IC:\Keil_v5\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__UVISI
+ON_VERSION SETA 521" --list=.\listings\problem1.lst Problem1.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ARMex 00000000
+
+Symbol: ARMex
+   Definitions
+      At line 1 in file Problem1.s
+   Uses
+      None
+Comment: ARMex unused
+TEMP 00000078
+
+Symbol: TEMP
+   Definitions
+      At line 40 in file Problem1.s
+   Uses
+      At line 9 in file Problem1.s
+Comment: TEMP used once
+start 00000000
+
+Symbol: start
+   Definitions
+      At line 3 in file Problem1.s
+   Uses
+      None
+Comment: start unused
+3 symbols
+335 symbols in table

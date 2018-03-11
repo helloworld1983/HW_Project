@@ -1,0 +1,72 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             ARMex, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000         start
+    4 00000000 E3A00010        MOV              r0,#16      ;insert each data i
+                                                            nto each register
+    5 00000004 E3A0100A        MOV              r1,#10
+    6 00000008 E3A02008        MOV              r2,#08
+    7 0000000C E3A03022        MOV              r3,#34
+    8 00000010         
+    9 00000010 E59F4010        LDR              r4, TEMPADDR1 ; insert TEMPADDR
+                                                            1's address into r4
+                                                            
+   10 00000014 E4C40002        STRB             r0, [r4], #2 ; insert memory(10
+                                                            00)'s value into r0
+                                                            
+   11 00000018 E4C41002        STRB             r1, [r4], #2 ; insert memory(10
+                                                            02)'s value into r1
+                                                            
+   12 0000001C E4C42002        STRB             r2, [r4], #2 ; insert memory(10
+                                                            04)'s value into r2
+                                                            
+   13 00000020 E5C43000        STRB             r3, [r4]    ; insert memory(100
+                                                            06's value into r3
+   14 00000024         
+   15 00000024 E1A0F00E        mov              pc,lr
+   16 00000028 00001000 
+                       TEMPADDR1
+                               &                &00001000
+   17 0000002C         
+   18 0000002C                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=ARM9E --apcs=interwork 
+--depend=.\objects\exercise3.d -o.\objects\exercise3.o -IC:\Keil_v5\ARM\RV31\IN
+C -IC:\Keil_v5\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__UVI
+SION_VERSION SETA 521" --list=.\listings\exercise3.lst exercise3.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ARMex 00000000
+
+Symbol: ARMex
+   Definitions
+      At line 1 in file exercise3.s
+   Uses
+      None
+Comment: ARMex unused
+TEMPADDR1 00000028
+
+Symbol: TEMPADDR1
+   Definitions
+      At line 16 in file exercise3.s
+   Uses
+      At line 9 in file exercise3.s
+Comment: TEMPADDR1 used once
+start 00000000
+
+Symbol: start
+   Definitions
+      At line 3 in file exercise3.s
+   Uses
+      None
+Comment: start unused
+3 symbols
+335 symbols in table
